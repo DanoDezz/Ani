@@ -5,6 +5,7 @@ WORKDIR /app
 
 COPY package.json ./
 RUN npm install
+npm install react-scripts@latest
 
 COPY . .
 
