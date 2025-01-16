@@ -9,9 +9,7 @@ const App = () => {
   const [details, setDetails] = useState(null);
 
   const searchAnime = async () => {
-    const response = await axios.get(
-      `https://<YOUR_BACKEND_URL>/api/search/${query}`
-    );
+    const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/search/${query}`);
     setResults(response.data.results);
     setDetails(null);
   };
