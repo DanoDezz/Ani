@@ -10,7 +10,7 @@ const App = () => {
 
   const searchAnime = async () => {
     const response = await axios.get(
-      `https://anime-nine-omega.vercel.app/api/search/${query}`
+      `https://<YOUR_BACKEND_URL>/api/search/${query}`
     );
     setResults(response.data.results);
     setDetails(null);
